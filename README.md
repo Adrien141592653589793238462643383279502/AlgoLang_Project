@@ -1,3 +1,3 @@
-# G.D.L.
+# AlgoLang
 Générateur de langues
-AlgoLang
+
