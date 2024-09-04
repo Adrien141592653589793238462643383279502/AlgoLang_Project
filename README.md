@@ -1,6 +1,6 @@
 # AlgoLang
 
-_Please, leave a star or a comment to our project_
+_Please, leave a star or a comment to our project._
 
 ## Description
 
