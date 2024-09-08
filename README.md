@@ -15,7 +15,7 @@ The project is currently under development. Only the [lists](https://github.com/
 - [@Sacha14159](https://github.com/Sacha14159)
 ## License
 
-This project is subject to a customized license (see "[License](https://github.com/Adrien141592653589793238462643383279502/G.D.L./blob/main/LICENSE)").
+This project is subject to a customized [License](https://github.com/Adrien141592653589793238462643383279502/G.D.L./blob/main/LICENSE).
 ## Contact us
 
 You can contact us at :
