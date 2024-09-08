@@ -2,10 +2,8 @@ from random import *
 
 file_adjs = open("liste_adjs.txt", "r")
 result = open("resultat.txt", "w")
-car_max = input('nombre maximum de caractere')
-car_min = input('nombre minimum de caractere')
-car_max = int(car_max)
-car_min =int(car_min)
+car_max = int(input('nombre maximum de caractere'))
+car_min = int(input('nombre minimum de caractere'))
 mot =""
 mot_t = ""
 nombre_car = 0 
