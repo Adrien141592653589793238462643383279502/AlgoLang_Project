@@ -6,7 +6,7 @@ This language generator is coded in Python and, for the moment, uses three lists
 
 The program's operation is fairly straightforward. For each word, the program generates and assigns another word based on specific criteria defined upstream in the code, as automatically as possible.
 ## Project status
-The project is currently under development. Only the [lists](https://github.com/Adrien141592653589793238462643383279502/G.D.L./tree/764f56fc5e64a3974eec633de7453ed03a0098c1/Project/Dictionaries) have been created for the moment.
+The project is currently under development. Only the [lists](https://github.com/Adrien141592653589793238462643383279502/G.D.L./tree/764f56fc5e64a3974eec633de7453ed03a0098c1/Project/Dictionaries) have been created for the moment. We welcome any comments or advice you may have.
 
 ## Authors
 
