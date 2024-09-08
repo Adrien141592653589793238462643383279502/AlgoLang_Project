@@ -15,7 +15,7 @@ for ligne in file_adjs:
     print(nombre_car)
     
     i = 0
-    lettre = ["a","b","c","d","e","f","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    lettre = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
     nombre_car = randint(car_min,car_max)
     
     while i <= nombre_car:    
