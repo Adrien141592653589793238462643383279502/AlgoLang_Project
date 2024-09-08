@@ -22,14 +22,10 @@ for ligne in file_adjs:
         mot_t += choice(lettre)
         i += 1
     
-    "
     mot_t = mot_t + "\n"
     result.write(mot_t)
     mot = ""
     mot_t = ""
 
-
-    
-    
 file_adjs.close()
 result.close()
