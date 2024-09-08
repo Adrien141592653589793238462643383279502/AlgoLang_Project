@@ -13,6 +13,8 @@ The project is currently under development. Only the [lists](https://github.com/
 - [@Adrien141592653589793238462643383279502](https://github.com/Adrien141592653589793238462643383279502)
 
 - [@Sacha14159](https://github.com/Sacha14159)
+
+- [@tantrax13](https://github.com/tantrax13)
 ## License
 
 This project is subject to a customized [license](https://github.com/Adrien141592653589793238462643383279502/G.D.L./blob/main/LICENSE).
