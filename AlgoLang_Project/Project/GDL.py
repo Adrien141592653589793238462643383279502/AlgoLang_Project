@@ -26,7 +26,7 @@ for line in file_adjs:
             break
     
     word_t = word_t + "\n"
-    result.write(word_t)
+    result.write(word + "|===>" + word_t)
     word = ""
     word_t = ""
 
