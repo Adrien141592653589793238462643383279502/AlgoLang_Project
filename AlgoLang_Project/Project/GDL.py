@@ -4,7 +4,7 @@ file_adjs = open("liste_adjs.txt", "r")
 result = open("result.txt", "w")
 char_min = int(input('Minimum number of characters : '))
 char_max = int(input('Maximum number of characters : '))
-char_rep = input("is the repetition of two letters authorised? yes/no : ")
+char_rep = input("Is the repetition of two letters authorised? yes/no : ")
 fr_add_L = ""
 new_L = ""
 if char_rep == "yes": 
