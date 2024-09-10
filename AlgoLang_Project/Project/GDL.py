@@ -7,17 +7,17 @@ char_max = int(input('Maximum number of characters : '))
 char_rep = input("Is the repetition of two letters authorised? yes/no : ")
 fr_add_L = ""
 new_L = ""
+unique_words = set()
+word =""
+word_t = ""
+num_char = 0
+
 if char_rep == "yes": 
     char_rep = True
 else : 
     char_rep = False
-unique_words = set()
-
-word =""
-word_t = ""
-num_char = 0 
-
 for line in file_adjs:
+    
     word = line
     num_char = randint(char_min,char_max)
     print(num_char)
