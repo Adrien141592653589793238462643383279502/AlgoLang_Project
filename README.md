@@ -6,6 +6,7 @@ This language generator is coded in Python and, for the moment, uses three lists
 
 The program's operation is fairly straightforward. For each word, the program generates and assigns another word based on specific criteria defined upstream in the code, as automatically as possible.
 ## Project status
+### v1.1.3
 The project is currently under development. The [lists](https://github.com/Adrien141592653589793238462643383279502/AlgoLang_Project/tree/main/AlgoLang_Project/Project) and some [lines of codes](https://github.com/Adrien141592653589793238462643383279502/AlgoLang_Project/blob/main/AlgoLang_Project/Project/GDL.py) have been created for the moment. We welcome any comments or advice you may have.
 
 ## Authors
