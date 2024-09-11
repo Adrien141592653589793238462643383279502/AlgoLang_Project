@@ -24,3 +24,7 @@ This project is subject to a customized [license](https://github.com/Adrien14159
 You can contact us at :
 
 algo-lang_project@protonmail.com
+
+***
+> # _For more informations, please visit our [wiki](https://github.com/Adrien141592653589793238462643383279502/AlgoLang_Project/wiki/AlgoLang-Project-Wiki)._
+***
