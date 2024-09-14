@@ -1,51 +1,37 @@
-from random import * 
+from random import choice, randint
 
-file_adjs = open("liste_adjs.txt", "r")
-result = open("result.txt", "w")
-char_min = int(input('Minimum number of characters : '))
-char_max = int(input('Maximum number of characters : '))
-char_rep = input("Is the repetition of two letters authorised? yes/no : ")
-fr_add_L = ""
-new_L = ""
-unique_words = set()
-word =""
-word_t = ""
-num_char = 0
+def generate_language(char_min, char_max, char_rep):
+    with open("liste_adjs.txt", "r") as file_adjs, open("algo.adj.txt", "w") as result:
+        fr_add_L = ""
+        new_L = ""
+        unique_words = set()
+        word = ""
+        word_t = ""
+        num_char = 0
 
-if char_rep == "yes": 
-    char_rep = True
-else : 
-    char_rep = False
-for line in file_adjs:
-    
-    word = line
-    num_char = randint(char_min,char_max)
-    print(num_char)
-    
-    
-    letter = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-    
-    while True:
-        for _ in range (num_char):
-            while True : 
-                new_L = choice(letter)
-                if new_L != fr_add_L and char_rep == False :
-                    fr_add_L = new_L
-                    word_t = word_t + new_L
+        for line in file_adjs:
+            word = line.strip()
+            num_char = randint(char_min, char_max)
+            
+            letter = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+            
+            while True:
+                word_t = ""
+                fr_add_L = ""
+
+                for _ in range(num_char):
+                    while True:
+                        new_L = choice(letter)
+                        
+                        if char_rep == "no" and new_L == fr_add_L:
+                            continue
+                        else:
+                            break
+
+                    word_t += new_L
+                    fr_add_L = new_L 
+
+                if word_t not in unique_words:
+                    unique_words.add(word_t)
                     break
-                if char_rep == True :
-                    word_t = word_t + new_L
-                    break
-            new_L = ""    
-
-        if word_t not in unique_words:
-            unique_words.add(word_t)
-            break
-    
-    word_t = word_t + "\n"
-    result.write(word + "|===>" + word_t)
-    word = ""
-    word_t = ""
-
-file_adjs.close()
-result.close()
+            result.write(f"{word} : {word_t}\n")
