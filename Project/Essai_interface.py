@@ -17,9 +17,7 @@ titre.pack()
 
 boite = Frame(fenetre)
 
-char_max = set()
-char_min = set()
-char_rep = set()
+
 
 def fonction():
     print(car_min.get())
@@ -27,8 +25,8 @@ def fonction():
     char_max = car_max.get()
     char_min = car_min.get()
 
-car_min = StringVar()
-car_max = StringVar()
+car_min = IntVar()
+car_max = IntVar()
 
 
 text1 = Label(boite, text="Le nombre minimal de caractère est:")
@@ -86,16 +84,16 @@ fenetre.mainloop()
 
 file_adjs = open("liste_adjs.txt", "r")
 result = open("result.txt", "w")
-int(char_min)
-int(char_max)
+
 fr_add_L = ""
 new_L = ""
 unique_words = set()
 word =""
 word_t = ""
 num_char = 0
+char_repet= set()
 
-if char_rep == "yes": 
+if repet == "yes": 
     char_rep = True
 else : 
     char_rep = False
@@ -103,7 +101,7 @@ else :
 for line in file_adjs:
     
     word = line
-    num_char = randint(car_min,car_max)
+    num_char = randint(car_min.get(),car_max.get())
     print(num_char)
     
     
