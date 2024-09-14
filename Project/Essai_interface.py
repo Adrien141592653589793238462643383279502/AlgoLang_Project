@@ -105,7 +105,7 @@ for line in file_adjs:
     print(num_char)
     
     
-    letter = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    letter = ["a","b","c","d","e","é","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
     
     while True:
         for _ in range (num_char):
