@@ -1,7 +1,5 @@
 from random import * 
 
-print("Bonjour Ethan")
-
 file_adjs = open("liste_adjs.txt", "r")
 result = open("result.txt", "w")
 char_min = int(input('Minimum number of characters : '))
