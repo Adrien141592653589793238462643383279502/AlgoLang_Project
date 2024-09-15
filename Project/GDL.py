@@ -40,7 +40,7 @@ def generate_language(char_min, char_max, char_rep):
             result.write(f"{word} : {word_t}\n")
     
 
-    with open("list_noms.txt", "r") as file_noms, open("algo.nom.txt", "w") as result:
+    with open("list_nouns.txt", "r") as file_noms, open("algo.nom.txt", "w") as result:
         fr_add_L = ""
         new_L = ""
         word = ""
