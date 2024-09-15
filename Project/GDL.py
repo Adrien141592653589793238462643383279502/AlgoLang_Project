@@ -1,7 +1,7 @@
 from random import choice, randint
 
 def generate_language(char_min, char_max, char_rep):
-    with open("liste_adjs.txt", "r") as file_adjs, open("algo.adj.txt", "w") as result:
+    with open("list_adjs.txt", "r") as file_adjs, open("algo.adj.txt", "w") as result:
         fr_add_L = ""
         new_L = ""
         unique_words = set()
@@ -40,7 +40,7 @@ def generate_language(char_min, char_max, char_rep):
             result.write(f"{word} : {word_t}\n")
     
 
-    with open("liste_noms.txt", "r") as file_noms, open("algo.nom.txt", "w") as result:
+    with open("list_noms.txt", "r") as file_noms, open("algo.nom.txt", "w") as result:
         fr_add_L = ""
         new_L = ""
         word = ""
@@ -77,7 +77,7 @@ def generate_language(char_min, char_max, char_rep):
             result.write(f"{word} : {word_t}\n")
 
 
-    with open("liste_vbs.txt", "r") as file_vbs, open("algo.vbs.txt", "w") as result:
+    with open("list_vbs.txt", "r") as file_vbs, open("algo.vbs.txt", "w") as result:
         fr_add_L = ""
         new_L = ""
         word = ""
