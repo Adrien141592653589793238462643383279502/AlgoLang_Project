@@ -7,8 +7,8 @@ window.title("Language Generator Interface")
 window['bg'] = 'white'
 window.resizable(height=False, width=False)
 
-textZone = Label(window, text="AlgoLang Project", font=("Noto Mono Sans", 20, "bold"), fg="black", bg="white").pack()
-title = Label(window, text="Random Languages Generator", font=("Noto Mono Sans", 15, "bold"), fg="black", bg="white").pack()
+textZone = Label(window, text="AlgoLang Project", font=("Times New Roman", 20, "bold"), fg="black", bg="white").pack()
+title = Label(window, text="Random Languages Generator", font=("Times New Roman", 15, "bold"), fg="black", bg="white").pack()
 
 questions_frame = Frame(window, bg="white")
 questions_frame.pack(pady=20)
@@ -44,7 +44,7 @@ def toggle_custom_max():
         custom_max.config(state=DISABLED)
 
 question2_label = Label(questions_frame, text="Maximum number of characters:", bg="white").grid(sticky="w", pady=(20, 0))
-radio6 = Radiobutton(questions_frame, text="5", variable=max_choice, value="5", bg="white", command=toggle_custom_max).grid(sticky="w")
+radio6 = Radiobutton(questions_frame, text="7", variable=max_choice, value="7", bg="white", command=toggle_custom_max).grid(sticky="w")
 radio7 = Radiobutton(questions_frame, text="9", variable=max_choice, value="9", bg="white", command=toggle_custom_max).grid(sticky="w")
 radio8 = Radiobutton(questions_frame, text="12", variable=max_choice, value="12", bg="white", command=toggle_custom_max).grid(sticky="w")
 radio9 = Radiobutton(questions_frame, text="15", variable=max_choice, value="15", bg="white", command=toggle_custom_max).grid(sticky="w")
@@ -75,7 +75,7 @@ def get_answers():
     success_window = Tk()
     success_window.geometry("300x150")
     success_window.title("Success")
-    Label(success_window, text="Language successfully generated!", font=("Arial", 14)).pack(pady=30)
+    Label(success_window, text="Language successfully generated!", font=("Times New Roman", 14)).pack(pady=30)
     Button(success_window, text="OK", command=success_window.destroy).pack(pady=10)
 
 submit_button = Button(window, text="Submit", command=get_answers, bg="white").pack(pady=20)
