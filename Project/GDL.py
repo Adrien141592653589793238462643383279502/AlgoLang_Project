@@ -13,22 +13,25 @@ def generate_language(char_min, char_max, char_rep):
             word = line.strip()
             num_char = randint(char_min, char_max)
             
-            letter = ["a","b","c","d","e","é",f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-            
+            letter = ["a","b","c","d","e","é","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+            consonne = ["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","z"]
+            voyelle = ["a","e","é","i","o","u","y"]
             while True:
                 word_t = ""
                 fr_add_L = ""
-
+                fr_add_L2 = ""
                 for _ in range(num_char):
                     while True:
                         new_L = choice(letter)
-                        
-                        if char_rep == "no" and new_L == fr_add_L:
+                        if new_L in consonne and fr_add_L in consonne and fr_add_L2 in consonne:
+                            new_L = choice(voyelle)
+                        elif char_rep == "no" and new_L == fr_add_L:
                             continue
                         else:
                             break
 
                     word_t += new_L
+                    fr_add_L2 = fr_add_L
                     fr_add_L = new_L 
 
                 if word_t not in unique_words:
@@ -48,24 +51,26 @@ def generate_language(char_min, char_max, char_rep):
             word = line.strip()
             num_char = randint(char_min, char_max)
             
-            letter = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
             
+
             while True:
                 word_t = ""
                 fr_add_L = ""
-
+                fr_add_L2 = ""
                 for _ in range(num_char):
                     while True:
                         new_L = choice(letter)
-                        
-                        if char_rep == "no" and new_L == fr_add_L:
+                        if new_L in consonne and fr_add_L in consonne and fr_add_L2 in consonne:
+                            new_L = choice(voyelle)
+                        elif char_rep == "no" and new_L == fr_add_L:
                             continue
                         else:
                             break
 
                     word_t += new_L
+                    fr_add_L2 = fr_add_L
                     fr_add_L = new_L 
-
+                    
                 if word_t not in unique_words:
                     unique_words.add(word_t)
                     break
@@ -83,22 +88,24 @@ def generate_language(char_min, char_max, char_rep):
             word = line.strip()
             num_char = randint(char_min, char_max)
             
-            letter = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+            
             
             while True:
                 word_t = ""
                 fr_add_L = ""
-
+                fr_add_L2 = ""
                 for _ in range(num_char):
                     while True:
                         new_L = choice(letter)
-                        
-                        if char_rep == "no" and new_L == fr_add_L:
+                        if new_L in consonne and fr_add_L in consonne and fr_add_L2 in consonne:
+                            new_L = choice(voyelle)
+                        elif char_rep == "no" and new_L == fr_add_L:
                             continue
                         else:
                             break
 
                     word_t += new_L
+                    fr_add_L2 = fr_add_L
                     fr_add_L = new_L 
 
                 if word_t not in unique_words:
