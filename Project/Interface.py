@@ -3,7 +3,7 @@ from GDL import generate_language
 
 window = Tk()
 window.geometry("400x800")
-window.title("Language Generator Interface")
+window.title("LangMake Interface")
 window['bg'] = 'white'
 window.resizable(height=False, width=False)
 
