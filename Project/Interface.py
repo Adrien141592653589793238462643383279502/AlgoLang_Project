@@ -2,7 +2,7 @@ from tkinter import *
 from GDL import generate_language
 
 window = Tk()
-window.geometry("400x600")
+window.geometry("400x800")
 window.title("Language Generator Interface")
 window['bg'] = 'white'
 window.resizable(height=False, width=False)
@@ -60,15 +60,35 @@ question3_label = Label(questions_frame, text="Allow repetition of letters?", bg
 radio11 = Radiobutton(questions_frame, text="Yes", variable=char_rep_choice, value="yes", bg="white").grid(sticky="w")
 radio12 = Radiobutton(questions_frame, text="No", variable=char_rep_choice, value="no", bg="white").grid(sticky="w")
 
+
+cons_rep_choice = StringVar()
+cons_rep_choice.set(None)
+
+
+question4_label = Label(questions_frame, text="Allow repetition of more than 2 consonants?", bg="white").grid(sticky="w", pady=(20, 0))
+radio11 = Radiobutton(questions_frame, text="Yes", variable=cons_rep_choice, value="yes", bg="white").grid(sticky="w")
+radio12 = Radiobutton(questions_frame, text="No", variable=cons_rep_choice, value="no", bg="white").grid(sticky="w")
+
+voy_rep_choice = StringVar()
+voy_rep_choice.set(None)
+
+
+question5_label = Label(questions_frame, text="Allow repetition of more than 2 vowels?", bg="white").grid(sticky="w", pady=(20, 0))
+radio11 = Radiobutton(questions_frame, text="Yes", variable=voy_rep_choice, value="yes", bg="white").grid(sticky="w")
+radio12 = Radiobutton(questions_frame, text="No", variable=voy_rep_choice, value="no", bg="white").grid(sticky="w")
+
+
 def get_answers():
     min_answer = custom_min.get() if min_choice.get() == "Other" else min_choice.get()
     max_answer = custom_max.get() if max_choice.get() == "Other" else max_choice.get()
     char_rep = char_rep_choice.get()
-    
+    cons_rep = cons_rep_choice.get()
+    voy_rep = voy_rep_choice.get()
+
     if not min_answer or not max_answer or not char_rep:
         return
     
-    generate_language(int(min_answer), int(max_answer), char_rep)
+    generate_language(int(min_answer), int(max_answer), char_rep, cons_rep, voy_rep)
     
     window.destroy()
 
