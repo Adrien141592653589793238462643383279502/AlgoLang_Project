@@ -1,4 +1,21 @@
-from random import choice, randint
+from random import choice, randint, shuffle
+
+
+
+def melanger():
+    with open("liste_mots.txt", "r") as file_mots1, open("algo.mots_melange.txt", "w") as result:
+        liste_mot = []
+        word= ""
+        for line in file_mots1:
+            word = line.strip()
+            liste_mot += word
+        shuffle(liste_mot)
+
+        for mot in liste_mot:
+            result.write(mot + "\n")
+
+
+
 
 def generate_language(char_min, char_max, char_rep, cons_rep, voy_rep):
     with open("liste_mots.txt", "r") as file_mots, open("algo.mots.txt", "w") as result:
