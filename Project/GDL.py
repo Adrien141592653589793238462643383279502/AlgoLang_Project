@@ -64,6 +64,8 @@ def generate_language(char_min, char_max, char_rep):
                         new_L = choice(letter)
                         if new_L in consonne and fr_add_L in consonne and fr_add_L2 in consonne:
                             new_L = choice(voyelle)
+                        if new_L in voyelle and fr_add_L in voyelle and fr_add_L2 in voyelle:
+                            new_L = choice(consonne)
                         elif char_rep == "no" and new_L == fr_add_L:
                             continue
                         else:
@@ -101,6 +103,8 @@ def generate_language(char_min, char_max, char_rep):
                         new_L = choice(letter)
                         if new_L in consonne and fr_add_L in consonne and fr_add_L2 in consonne:
                             new_L = choice(voyelle)
+                        if new_L in voyelle and fr_add_L in voyelle and fr_add_L2 in voyelle:
+                            new_L = choice(consonne)
                         elif char_rep == "no" and new_L == fr_add_L:
                             continue
                         else:
