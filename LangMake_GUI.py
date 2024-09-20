@@ -126,6 +126,11 @@ def get_answers():
     cons_rep = cons_rep_choice.get()
     vow_rep = vow_rep_choice.get()
 
+    if int(min_answer) < 1 or int(max_answer) < 1:
+        message = Label(window, text="the characters maximum and minimum should be superior to zero")
+        message.pack(pady=15)
+        return
+        
     if not min_answer or not max_answer or not char_rep:
         return
 
