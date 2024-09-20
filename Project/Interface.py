@@ -1,5 +1,5 @@
 from tkinter import *
-from LangMake import generate_language
+from LangMaker import generate_language
 
 window = Tk()
 window.geometry("500x800")
