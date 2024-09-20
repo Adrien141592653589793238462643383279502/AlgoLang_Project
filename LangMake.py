@@ -13,7 +13,7 @@ def mix():
             result.write(mot + "\n")
 
 def generate_language(char_min, char_max, char_rep, cons_rep, vow_rep):
-    with open("list_words.txt", "r") as file_mots, open("algo.words.txt", "w") as result:
+    with open("algo.mixed_words.txt", "r") as file_mots, open("algo.words.txt", "w") as result:
     
         unique_words = set()
         word = ""
