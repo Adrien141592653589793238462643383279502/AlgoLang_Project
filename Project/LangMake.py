@@ -1,10 +1,10 @@
 from random import choice, randint, shuffle
 
 def mix():
-    with open("list_words.txt", "r") as file_mots1, open("algo.mixed_words.txt", "w") as result:
+    with open("list_words.txt", "r") as file_words, open("algo.mixed_words.txt", "w") as result:
         words_list = []
         word= ""
-        for line in file_mots1:
+        for line in file_words:
             word = line.strip()
             words_list.append(word)
         shuffle(words_list)
