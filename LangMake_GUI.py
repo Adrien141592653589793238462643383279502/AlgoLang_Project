@@ -1,5 +1,5 @@
 from tkinter import *
-from LangMake import generate_language
+from LangMake import generate_language, mix
 
 window = Tk()
 window.geometry("500x800")
@@ -113,7 +113,8 @@ def get_answers():
 
     if not min_answer or not max_answer or not char_rep:
         return
-    
+
+    mix()
     generate_language(int(min_answer), int(max_answer),char_rep, cons_rep, vow_rep)
     
     window.destroy()
