@@ -81,9 +81,9 @@ custom_max.grid(sticky="w", padx=10)
 char_rep_choice = StringVar()
 char_rep_choice.set(None)
 
-question3_label = Label(questions_frame, text="Allow repetition of same letters?", bg="#f3f4f6").grid(sticky="w", pady=(20, 0), padx=(10))
-radio11 = Radiobutton(questions_frame, text="Yes", variable=char_rep_choice, value="yes", bg="#f3f4f6").grid(sticky="w")
-radio12 = Radiobutton(questions_frame, text="No", variable=char_rep_choice, value="no", bg="#f3f4f6").grid(sticky="w")
+question3_label = Label(questions_frame, text="Allow repetition of same letters?", bg="#f3f4f6", fg="#333333", font=("Consolas", 12)).grid(sticky="w", pady=(10, 0), padx=(10))
+radio11 = Radiobutton(questions_frame, text="Yes", variable=char_rep_choice, value="yes", bg="#f3f4f6").grid(sticky="w", padx=10)
+radio12 = Radiobutton(questions_frame, text="No", variable=char_rep_choice, value="no", bg="#f3f4f6").grid(sticky="w", padx=10)
 
 cons_rep_choice = StringVar()
 cons_rep_choice.set(None)
