@@ -7,6 +7,7 @@ window.title("LangMake GUI")
 window['bg'] = '#f3f4f6'
 window.resizable(height=False, width=False)
 
+
 textZone = Label(window, text="AlgoLang Project", font=("Consolas", 30, "bold"), fg="#333333", bg="#f3f4f6")
 textZone.pack()
 
@@ -15,6 +16,8 @@ title.pack()
 
 questions_frame = Frame(window, bg="#f3f4f6")
 questions_frame.pack(pady=20, padx=20)
+
+
 
 min_choice = StringVar()
 min_choice.set(None)
@@ -47,6 +50,8 @@ radio5.grid(sticky="w", padx=10)
 custom_min = Entry(questions_frame, bg="#ffffff", fg="#333333", font=("Consolas", 10), state=DISABLED)
 custom_min.grid(sticky="w", padx=10)
 
+
+
 max_choice = StringVar()
 max_choice.set(None)
 
@@ -78,6 +83,8 @@ radio10.grid(sticky="w", padx=10)
 custom_max = Entry(questions_frame, bg="#ffffff", fg="#333333", font=("Consolas", 10), state=DISABLED)
 custom_max.grid(sticky="w", padx=10)
 
+
+
 char_rep_choice = StringVar()
 char_rep_choice.set(None)
 
@@ -85,12 +92,16 @@ question3_label = Label(questions_frame, text="Allow repetition of same letters?
 radio11 = Radiobutton(questions_frame, text="Yes", variable=char_rep_choice, value="yes", bg="#f3f4f6").grid(sticky="w", padx=10)
 radio12 = Radiobutton(questions_frame, text="No", variable=char_rep_choice, value="no", bg="#f3f4f6").grid(sticky="w", padx=10)
 
+
+
 cons_rep_choice = StringVar()
 cons_rep_choice.set(None)
 
 question4_label = Label(questions_frame, text="Allow repetition of more than 2 consonants?", bg="#f3f4f6", fg="#333333", font=("Consolas", 12)).grid(sticky="w", pady=(20, 0), padx=10)
 radio11 = Radiobutton(questions_frame, text="Yes", variable=cons_rep_choice, value="yes", bg="#f3f4f6", fg="#333333", font=("Consolas", 10)).grid(sticky="w", padx=10)
 radio12 = Radiobutton(questions_frame, text="No", variable=cons_rep_choice, value="no", bg="#f3f4f6", fg="#333333", font=("Consolas", 10)).grid(sticky="w", padx=10)
+
+
 
 vow_rep_choice = StringVar()
 vow_rep_choice.set(None)
@@ -103,6 +114,10 @@ radio11.grid(sticky="w", padx=10)
 
 radio12 = Radiobutton(questions_frame, text="No", variable=vow_rep_choice, value="no", bg="#f3f4f6", fg="#333333", font=("Consolas", 10))
 radio12.grid(sticky="w", padx=10)
+
+
+
+
 
 def get_answers():
     min_answer = custom_min.get() if min_choice.get() == "Other" else min_choice.get()
@@ -125,6 +140,7 @@ def get_answers():
     success_window['bg'] = '#f3f4f6'
     Label(success_window, text="Language successfully generated!", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack(pady=30)
     Button(success_window, text="OK", command=success_window.destroy, bg="#e0e0e0", fg="#333333").pack(pady=10)
+
 
 submit_button = Button(window, text="Submit", command=get_answers, bg="#e0e0e0", fg="#333333", font=("Consolas", 12))
 submit_button.pack(pady=20)
