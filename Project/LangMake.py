@@ -6,7 +6,7 @@ def mix():
         word= ""
         for line in file_mots1:
             word = line.strip()
-            words_list += word
+            words_list.append(word)
         shuffle(words_list)
 
         for mot in words_list:
