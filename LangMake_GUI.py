@@ -150,7 +150,7 @@ def get_answers():
             Label(error_window, text="less than minimum characters.", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack(pady=10)
         
         else:
-            Label(error_window, text="Ensure all values are positive integers.", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack(pady=10)
+            Label(error_window, text="Number of characters should be positive integers.", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack(pady=10)
 
         Button(error_window, text="OK", command=error_window.destroy, bg="#e0e0e0", fg="#333333").pack(pady=10)
         error_window.mainloop()
