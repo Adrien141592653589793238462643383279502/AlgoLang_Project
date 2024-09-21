@@ -112,7 +112,7 @@ def get_answers():
         cons_rep = cons_rep_choice.get()
         vow_rep = vow_rep_choice.get()
 
-        if not min_answer or not max_answer or not char_rep:
+        if not min_answer or not max_answer:
             raise ValueError
 
         min_answer = int(min_answer)
@@ -134,15 +134,21 @@ def get_answers():
         Button(success_window, text="OK", command=success_window.destroy, bg="#e0e0e0", fg="#333333").pack(pady=10)
 
     except ValueError:
+        
         error_window = Tk()
         error_window.geometry("400x200")
         error_window.title("Error")
         error_window['bg'] = '#f3f4f6'
+        
         Label(error_window, text="Invalid input:", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack(pady=10)
-
-        if max_answer and min_answer and int(max_answer) < int(min_answer):
+        
+        if not min_answer or not max_answer:
+            Label(error_window, text="Please, select maximum and minimum characters", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack(pady=10)
+       
+        elif max_answer and min_answer and int(max_answer) < int(min_answer):
             Label(error_window, text="Maximum characters cannot be", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack(pady=10)
             Label(error_window, text="less than minimum characters.", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack(pady=10)
+        
         else:
             Label(error_window, text="Ensure all values are positive integers.", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack(pady=10)
 
