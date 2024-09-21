@@ -118,7 +118,7 @@ def get_answers():
         min_answer = int(min_answer)
         max_answer = int(max_answer)
 
-        if min_answer <= 0 or max_answer <= 0 or max_answer < min_answer:
+        if min_answer < 1 or max_answer < 1 or max_answer < min_answer:
             raise ValueError
         
         mix()
