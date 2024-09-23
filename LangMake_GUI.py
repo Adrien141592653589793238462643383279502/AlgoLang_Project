@@ -1,5 +1,5 @@
 from tkinter import *
-from LangMake import generate_language, mix
+from LangMake import generate_language, mix, demix
 
 window = Tk()
 window.geometry("500x800")
@@ -123,6 +123,7 @@ def get_answers():
         
         mix()
         generate_language(min_answer, max_answer, char_rep, cons_rep, vow_rep)
+        demix()
         
         window.destroy()
 
