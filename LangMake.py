@@ -16,6 +16,20 @@ def mix():
             result.write(mot + "\n")
 
 
+def demix():
+    with open("algo.words.txt", "r") as file_words, open("algo_words_final.txt", "w") as result:
+        words_list = []
+        word= ""
+
+        for line in file_words:
+            word = line.strip()
+            words_list.append(word)
+
+        words_list.sort()
+
+        for mot in words_list:
+            result.write(mot + "\n")
+
 
 def generate_language(char_min, char_max, char_rep, cons_rep, vow_rep):
     
