@@ -142,15 +142,12 @@ def get_answers():
         
         Label(error_window, text="Invalid input:", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack(pady=10)
         
-        if not min_answer or not max_answer:
-            Label(error_window, text="Please, select maximum and minimum characters", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack(pady=10)
-       
-        elif max_answer and min_answer and int(max_answer) < int(min_answer):
-            Label(error_window, text="Maximum characters cannot be", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack(pady=10)
-            Label(error_window, text="less than minimum characters.", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack(pady=10)
+        if max_answer and min_answer and int(max_answer) < int(min_answer):
+            Label(error_window, text="Maximum characters cannot be", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack()
+            Label(error_window, text="less than minimum characters.", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack()
         
         else:
-            Label(error_window, text="Number of characters should be positive integers.", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack(pady=10)
+            Label(error_window, text="Number of characters should be positive integers.", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack()
 
         Button(error_window, text="OK", command=error_window.destroy, bg="#e0e0e0", fg="#333333").pack(pady=10)
         error_window.mainloop()
