@@ -1,5 +1,5 @@
 from tkinter import *
-from LangMake import generate_language, mix, demix
+from LangMake import generate_language, mix
 
 window = Tk()
 window.geometry("500x800")
@@ -25,7 +25,6 @@ def toggle_custom_min():
     else:
         custom_min.delete(0, END)
         custom_min.config(state=DISABLED)
-        
 
 question1_label = Label(questions_frame, text="Minimum number of characters:", bg="#f3f4f6", fg="#333333", font=("Consolas", 12))
 question1_label.grid(sticky="w", padx=10)
@@ -107,25 +106,20 @@ radio12.grid(sticky="w", padx=10)
 
 def get_answers():
     try:
+        
         min_answer = custom_min.get() if min_choice.get() == "Other" else min_choice.get()
         max_answer = custom_max.get() if max_choice.get() == "Other" else max_choice.get()
         char_rep = char_rep_choice.get()
-        cons_rep = cons_rep_choice.get()
-        vow_rep = vow_rep_choice.get()
-
-        if not min_answer or not max_answer:
-            raise ValueError
 
         min_answer = int(min_answer)
         max_answer = int(max_answer)
 
-        if min_answer < 1 or max_answer < 1 or max_answer < min_answer:
-            raise ValueError
+        if min_answer <= 0 or max_answer <= 0 or max_answer < min_answer:
+            raise ValueError("Please ensure all fields are filled with values that are positive integers and maximum is greater than minimum.")
         
         mix()
-        generate_language(min_answer, max_answer, char_rep, cons_rep, vow_rep)
-        demix()
-        
+        generate_language(min_answer, max_answer, char_rep, cons_rep_choice.get(), vow_rep_choice.get())
+
         window.destroy()
 
         success_window = Tk()
@@ -136,23 +130,23 @@ def get_answers():
         Button(success_window, text="OK", command=success_window.destroy, bg="#e0e0e0", fg="#333333").pack(pady=10)
 
     except ValueError:
-        
         error_window = Tk()
         error_window.geometry("400x200")
         error_window.title("Error")
         error_window['bg'] = '#f3f4f6'
-        
         Label(error_window, text="Invalid input:", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack(pady=10)
-        
-        if max_answer and min_answer and int(max_answer) < int(min_answer):
-            Label(error_window, text="Maximum characters cannot be", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack()
-            Label(error_window, text="less than minimum characters.", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack()
-        
-        else:
-            Label(error_window, text="Number of characters should be positive integers.", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack()
 
-        Button(error_window, text="OK", command=error_window.destroy, bg="#e0e0e0", fg="#333333").pack(pady=10)
-        error_window.mainloop()
+    if min_choice.get() is None and max_choice.get() is None and char_rep_choice.get() is None:
+        Label(error_window, text="Please ensure all fields are filled \n with values that are positive integers \n and maximum is greater than minimum.", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack(pady=10)
+    elif min_answer is None or max_answer is None:
+        Label(error_window, text="Please ensure all fields are filled \n with values that are positive integers \n and maximum is greater than minimum.", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack(pady=10)
+    else:
+        Label(error_window, text="Please ensure all fields are filled \n with values that are positive integers \n and maximum is greater than minimum.", font=("Consolas", 12), bg="#f3f4f6", fg="#333333").pack(pady=10)
+
+    Button(error_window, text="OK", command=error_window.destroy, bg="#e0e0e0", fg="#333333").pack(pady=10)
+    error_window.mainloop()
+
+
 
 submit_button = Button(window, text="Submit", command=get_answers, bg="#e0e0e0", fg="#333333", font=("Consolas", 12))
 submit_button.pack(pady=20)
