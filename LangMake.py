@@ -1,5 +1,6 @@
 from random import choice, randint, shuffle
 
+
 def mix():
     
     with open("list_words.txt", "r") as file_words, open("algo.mixed_words.txt", "w") as result:
