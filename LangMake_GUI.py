@@ -25,6 +25,7 @@ def toggle_custom_min():
     else:
         custom_min.delete(0, END)
         custom_min.config(state=DISABLED)
+        
 
 question1_label = Label(questions_frame, text="Minimum number of characters:", bg="#f3f4f6", fg="#333333", font=("Consolas", 12))
 question1_label.grid(sticky="w", padx=10)
