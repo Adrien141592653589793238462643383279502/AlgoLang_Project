@@ -34,7 +34,7 @@ def demix():
 
 def generate_language(char_min, char_max, char_rep, cons_rep, vow_rep):
     
-    with open("algo.mixed_words.txt", "r") as file_mots, open("algo.words.txt", "w") as result, , open("algo.just.words.txt", "w") as result2:
+    with open("algo.mixed_words.txt", "r") as file_mots, open("algo.words.txt", "w") as result:
     
         unique_words = set()
         word = ""
@@ -88,6 +88,4 @@ def generate_language(char_min, char_max, char_rep, cons_rep, vow_rep):
                     break
                     
             result.write(f"{word} : {word_t}\n")
-             word += "\n"
-            result2.write(word)
-            result2.write(word_t)
+             
