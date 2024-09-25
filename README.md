@@ -6,7 +6,7 @@ AlgoLang is a language generator developed in Python that automatically creates 
 
 The goal of AlgoLang is to take each word from a French word list and generate a new word using an algorithm that follows specific rules. The generated words are then saved, paired with their French counterparts, into an output file.
 
-Current version: **v1.3.10**
+Current version: **v1.3.11**
 
 ## Project Status
 
